@@ -195,7 +195,7 @@ function VideoHero() {
               }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#9B5CF6", display: "block", flexShrink: 0 }} />
                 <span style={{ color: "#A78BFA", fontSize: 12, fontWeight: 500, letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                  DJ événementiel — Pas-de-Calais
+                  DJ événementiel — Hauts-de-France
                 </span>
               </div>
             </Reveal>
@@ -210,14 +210,14 @@ function VideoHero() {
                 marginBottom: 24,
                 textShadow: "0 0 80px rgba(255,255,255,0.08)",
               }}>
-                L'ambiance de vos événements,{" "}
-                <span style={{ color: "#9B5CF6" }}>c'est notre métier</span>
+                Votre DJ pour vos soirées,{" "}
+                <span style={{ color: "#9B5CF6" }}>anniversaires & événements</span>
               </h1>
             </Reveal>
 
             <Reveal delay={2}>
               <p style={{ fontSize: 17, color: "#525252", lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
-                Mariages, anniversaires, soirées privées —{" "}
+                Anniversaires, soirées privées, bals, associations et entreprises —{" "}
                 <span style={{ color: "#A1A1AA" }}>MK Sound</span>{" "}
                 crée l'ambiance qui vous ressemble dans le Pas-de-Calais et les Hauts-de-France.
               </p>
@@ -255,8 +255,8 @@ function VideoHero() {
                 }}>
                   <iframe
                     style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
-                    src="https://www.youtube.com/embed/__PGkM1oaX0"
-                    title="MK Sound — Aperçu"
+                    src="https://www.youtube.com/embed/JYZ9N5_jqts?rel=0&origin=https%3A%2F%2Fmksound-evenementiel.netlify.app"
+                    title="MK Sound — DJ événementiel"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
