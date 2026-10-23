@@ -97,6 +97,7 @@ function Nav() {
 
   const links = [
     { label: "Offres", href: "#offres" },
+    { label: "FAQ", href: "#faq" },
     { label: "Avis", href: "#avis" },
     { label: "Contact", href: "#contact" },
   ];
@@ -257,6 +258,7 @@ function VideoHero() {
                     style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
                     src="https://www.youtube.com/embed/JYZ9N5_jqts?rel=0&origin=https%3A%2F%2Fmksound-evenementiel.netlify.app"
                     title="MK Sound — DJ événementiel"
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
@@ -593,6 +595,42 @@ function Avis() {
   );
 }
 
+/* ── FAQ ───────────────────────────────────────────────────────────────────── */
+function FAQ() {
+  const questions = [
+    ["Pour quels événements intervenez-vous ?", "MK Sound anime les anniversaires, soirées privées, bals, événements associatifs, soirées d'entreprise et autres événements sur mesure dans le Nord et le Pas-de-Calais."],
+    ["Dans quelles villes vous déplacez-vous ?", "Nous intervenons notamment autour de Cambrai, Douai, Valenciennes, Arras, Lens, Béthune et Lille. Indiquez le lieu de votre événement dans votre demande pour confirmer la disponibilité."],
+    ["Peut-on choisir les musiques ?", "Oui. Nous échangeons en amont sur l'ambiance attendue, les styles à privilégier et les titres à éviter afin de préparer une prestation qui vous ressemble."],
+    ["Le matériel son et lumière est-il inclus ?", "Selon la formule choisie, MK Sound propose une sonorisation et des jeux de lumières adaptés au lieu, au nombre d'invités et à l'ambiance souhaitée."],
+    ["Comment obtenir un devis ?", "Utilisez le formulaire ou appelez directement le 06 65 72 16 61. Précisez la date, le lieu, le type d'événement et le nombre approximatif de participants."],
+  ];
+  return (
+    <section id="faq" style={{ padding: "100px 0", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px" }}>
+        <Reveal>
+          <p className="section-label">Questions fréquentes</p>
+          <h2 className="section-title">Préparer votre<br /><span style={{ color: "#9B5CF6" }}>événement sereinement</span></h2>
+        </Reveal>
+        <div style={{ marginTop: 36, display: "grid", gap: 12 }}>
+          {questions.map(([question, answer], i) => (
+            <Reveal key={question} delay={i * 50}>
+              <details style={{ padding: "20px 22px", borderRadius: 12, border: "1px solid rgba(167,139,250,0.18)", background: "rgba(255,255,255,0.025)" }}>
+                <summary style={{ cursor: "pointer", color: "#EBEBEF", fontSize: 16, fontWeight: 700 }}>{question}</summary>
+                <p style={{ margin: "14px 0 0", color: "#A1A1AA", fontSize: 15, lineHeight: 1.7 }}>{answer}</p>
+              </details>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={260}>
+          <a href="/prestations/" className="btn-outline" style={{ display: "inline-flex", marginTop: 30, padding: "12px 18px", fontSize: 14 }}>
+            Découvrir les prestations
+          </a>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 /* ── PROCESSUS ─────────────────────────────────────────────────────────────── */
 function Process() {
   const steps = [
@@ -794,6 +832,7 @@ export default function App() {
       <Differenciation />
       <ZonesIntervention />
       <Avis />
+      <FAQ />
       <Process />
       <Urgence />
       <Formulaire />
