@@ -210,16 +210,16 @@ function VideoHero() {
                 marginBottom: 24,
                 textShadow: "0 0 80px rgba(255,255,255,0.08)",
               }}>
-                DJ événementiel dans le Pas-de-Calais pour vos{" "}
-                <span style={{ color: "#9B5CF6" }}>mariages, anniversaires & événements</span>
+                DJ & animation événementielle dans le{" "}
+                <span style={{ color: "#9B5CF6" }}>Nord et le Pas-de-Calais</span>
               </h1>
             </Reveal>
 
             <Reveal delay={2}>
               <p style={{ fontSize: 17, color: "#525252", lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
-                Anniversaires, soirées privées, bals, associations et entreprises —{" "}
+                Anniversaires, soirées privées, bals, associations, entreprises et événements sur mesure —{" "}
                 <span style={{ color: "#A1A1AA" }}>MK Sound</span>{" "}
-                crée l'ambiance qui vous ressemble depuis Bapaume, dans le Pas-de-Calais et les Hauts-de-France.
+                crée l'ambiance qui vous ressemble dans le Nord, le Pas-de-Calais et les Hauts-de-France.
               </p>
             </Reveal>
 
@@ -498,6 +498,35 @@ function Differenciation() {
   );
 }
 
+/* ── ZONES D'INTERVENTION ─────────────────────────────────────────────────── */
+function ZonesIntervention() {
+  const villes = ["Cambrai", "Douai", "Valenciennes", "Arras", "Lens", "Béthune", "Lille"];
+  return (
+    <section id="zones" style={{ padding: "100px 0", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
+        <Reveal>
+          <div style={{ maxWidth: 780 }}>
+            <p className="section-label">Zones d'intervention</p>
+            <h2 className="section-title">Votre DJ événementiel<br /><span style={{ color: "#9B5CF6" }}>dans le Nord & le Pas-de-Calais</span></h2>
+            <p style={{ fontSize: 16, lineHeight: 1.75, color: "#A1A1AA", marginTop: 20 }}>
+              MK Sound anime vos anniversaires, soirées privées, bals, événements associatifs et soirées d'entreprise dans le Nord, le Pas-de-Calais et plus largement les Hauts-de-France. Nous intervenons notamment autour de Cambrai, Douai, Valenciennes, Arras, Lens, Béthune et Lille.
+            </p>
+          </div>
+        </Reveal>
+        <Reveal delay={80}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 32 }}>
+            {villes.map((ville) => (
+              <span key={ville} style={{ padding: "9px 14px", borderRadius: 100, border: "1px solid rgba(167,139,250,0.24)", background: "rgba(124,58,237,0.1)", color: "#DDD6FE", fontSize: 14, fontWeight: 600 }}>
+                DJ événementiel {ville}
+              </span>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 /* ── AVIS ──────────────────────────────────────────────────────────────────── */
 function Avis() {
   const temoignages = [
@@ -734,7 +763,7 @@ function Footer() {
     }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
         <Logo small />
-        <p style={{ fontSize: 13, color: "#3F3F46" }}>DJ & animation événementielle — Bapaume, Pas-de-Calais & Hauts-de-France</p>
+        <p style={{ fontSize: 13, color: "#3F3F46" }}>DJ & animation événementielle — Nord, Pas-de-Calais & Hauts-de-France</p>
         <a href="tel:+33665721661" style={{ fontSize: 13, color: "#A78BFA", fontWeight: 600, textDecoration: "none" }}>06 65 72 16 61</a>
         <p style={{ fontSize: 12, color: "#27272A" }}>© {new Date().getFullYear()} MK Sound</p>
       </div>
@@ -763,6 +792,7 @@ export default function App() {
       <SocialProof />
       <Offres />
       <Differenciation />
+      <ZonesIntervention />
       <Avis />
       <Process />
       <Urgence />
