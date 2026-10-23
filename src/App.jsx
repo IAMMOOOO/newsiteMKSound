@@ -210,8 +210,8 @@ function VideoHero() {
                 marginBottom: 24,
                 textShadow: "0 0 80px rgba(255,255,255,0.08)",
               }}>
-                Votre DJ pour vos soirées,{" "}
-                <span style={{ color: "#9B5CF6" }}>anniversaires & événements</span>
+                DJ événementiel dans le Pas-de-Calais pour vos{" "}
+                <span style={{ color: "#9B5CF6" }}>mariages, anniversaires & événements</span>
               </h1>
             </Reveal>
 
@@ -219,7 +219,7 @@ function VideoHero() {
               <p style={{ fontSize: 17, color: "#525252", lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
                 Anniversaires, soirées privées, bals, associations et entreprises —{" "}
                 <span style={{ color: "#A1A1AA" }}>MK Sound</span>{" "}
-                crée l'ambiance qui vous ressemble dans le Pas-de-Calais et les Hauts-de-France.
+                crée l'ambiance qui vous ressemble depuis Bapaume, dans le Pas-de-Calais et les Hauts-de-France.
               </p>
             </Reveal>
 
@@ -501,6 +501,8 @@ function Differenciation() {
 /* ── AVIS ──────────────────────────────────────────────────────────────────── */
 function Avis() {
   const temoignages = [
+    { name: "Sarah Schotté", text: "Recommande vivement pour un mariage, personne très à l'écoute avec un bon instinct musical en fonction du moment de la soirée, encore un grand merci.", date: "Octobre 2026" },
+    { name: "Muriel Dris", text: "Super DJ, très bonne ambiance. Il a adapté le son en fonction du public. Nous avons passé une très bonne soirée.", date: "Avril 2026" },
     { name: "Malena E.", text: "Un immense merci à notre DJ Max pour cette soirée absolument mémorable ! L'ambiance était parfaite du début à la fin. Il a su lire la foule à la perfection et créer une énergie incroyable." },
     { name: "Alyson D.", text: "Très bon DJ, très professionnel ! À la hauteur de nos attentes. Nous avons passé une super soirée ! À l'écoute, soucieux de bien faire ! Vous pouvez foncer les yeux fermés." },
     { name: "Laurent L.", text: "Une très belle prestation conforme à nos attentes, le travail est préparé pour être personnalisé. La gentillesse et la disponibilité sont des atouts qui s'ajoutent au professionnalisme." },
@@ -530,15 +532,15 @@ function Avis() {
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
               </svg>
-              <span style={{ fontSize: 13, color: "#52525B", fontWeight: 500 }}>5/5 · 6 avis Google</span>
+              <span style={{ fontSize: 13, color: "#EBEBEF", fontWeight: 700 }}>5,0/5 · 8 avis Google</span>
             </div>
           </div>
         </Reveal>
 
-        <div className="reviews-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 1, background: "rgba(255,255,255,0.06)", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="reviews-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
           {temoignages.map((t, i) => (
             <Reveal key={t.name} delay={i * 80}>
-              <div className="review-cell">
+              <div className="review-cell" style={{ height: "100%", padding: 28, borderRadius: 16, border: "1px solid rgba(167,139,250,0.18)", background: "linear-gradient(145deg, rgba(124,58,237,0.13), rgba(13,16,32,0.94) 58%)", boxShadow: "0 18px 42px rgba(0,0,0,0.2)" }}>
                 <div style={{ display: "flex", gap: 2, marginBottom: 16 }}>
                   {[...Array(5)].map((_, j) => (
                     <svg key={j} width="13" height="13" fill="#7C3AED" viewBox="0 0 20 20">
@@ -546,10 +548,13 @@ function Avis() {
                     </svg>
                   ))}
                 </div>
-                <p style={{ fontSize: 22, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, fontWeight: 700 }}>
+                <p style={{ fontSize: 17, color: "#FFFFFF", lineHeight: 1.65, marginBottom: 24, fontWeight: 500 }}>
                   "{t.text}"
                 </p>
-                <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", fontWeight: 500 }}>{t.name}</p>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center" }}>
+                  <p style={{ fontSize: 14, color: "#EBEBEF", fontWeight: 700 }}>{t.name}</p>
+                  <span style={{ fontSize: 12, color: "rgba(255,255,255,0.45)" }}>{t.date || "Avis Google"}</span>
+                </div>
               </div>
             </Reveal>
           ))}
@@ -689,7 +694,7 @@ function Formulaire() {
           <div style={{ marginBottom: 48 }}>
             <p className="section-label">Contact</p>
             <h2 className="section-title">Vérifier la disponibilité</h2>
-            <p style={{ fontSize: 15, color: "#525252", marginTop: 12 }}>Remplissez ce formulaire, on vous répond sous 24h.</p>
+            <p style={{ fontSize: 15, color: "#525252", marginTop: 12 }}>Remplissez ce formulaire, on vous répond sous 24h. Ou appelez le <a href="tel:+33665721661" style={{ color: "#A78BFA", fontWeight: 600 }}>06 65 72 16 61</a>.</p>
           </div>
         </Reveal>
 
@@ -729,7 +734,8 @@ function Footer() {
     }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
         <Logo small />
-        <p style={{ fontSize: 13, color: "#3F3F46" }}>DJ & animation événementielle — Pas-de-Calais & Hauts-de-France</p>
+        <p style={{ fontSize: 13, color: "#3F3F46" }}>DJ & animation événementielle — Bapaume, Pas-de-Calais & Hauts-de-France</p>
+        <a href="tel:+33665721661" style={{ fontSize: 13, color: "#A78BFA", fontWeight: 600, textDecoration: "none" }}>06 65 72 16 61</a>
         <p style={{ fontSize: 12, color: "#27272A" }}>© {new Date().getFullYear()} MK Sound</p>
       </div>
     </footer>
