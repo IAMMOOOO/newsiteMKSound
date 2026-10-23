@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mksound-evenementiel.netlify.app/sitemap.xml
