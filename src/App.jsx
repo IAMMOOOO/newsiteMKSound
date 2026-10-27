@@ -233,7 +233,7 @@ function VideoHero() {
               <p style={{ fontSize: 17, color: "#525252", lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
                 Anniversaires, soirées privées, bals, associations, entreprises et événements sur mesure —{" "}
                 <span style={{ color: "#A1A1AA" }}>MK Sound</span>{" "}
-                imagine une signature sonore et lumière sur mesure pour vos mariages, anniversaires et événements à Arras, Cambrai, Douai, Péronne et dans les Hauts-de-France.
+                imagine une signature sonore et lumière sur mesure pour vos mariages, anniversaires et événements à Arras, Cambrai, Douai et dans les Hauts-de-France.
               </p>
             </Reveal>
 
@@ -332,6 +332,10 @@ function Galerie() {
           </figure>
         ))}
       </div>
+      <figure className="gallery-film">
+        <video src="/film/en-conditions-reelles.mov#t=0,8" autoPlay muted loop playsInline preload="metadata" aria-label="MK Sound en conditions réelles" />
+        <figcaption><span>En conditions réelles</span><small>DJ set · son · lumière</small></figcaption>
+      </figure>
     </section>
   );
 }
@@ -552,7 +556,7 @@ function Differenciation() {
 
 /* ── ZONES D'INTERVENTION ─────────────────────────────────────────────────── */
 function ZonesIntervention() {
-  const villes = ["Arras", "Cambrai", "Douai", "Péronne", "Albert", "Hauts-de-France"];
+  const villes = ["Arras", "Cambrai", "Douai", "Albert", "Hauts-de-France"];
   return (
     <section id="zones" style={{ padding: "100px 0", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
@@ -561,7 +565,7 @@ function ZonesIntervention() {
             <p className="section-label">Zones d'intervention</p>
             <h2 className="section-title">Une présence locale.<br /><span style={{ color: "#C4B5FD" }}>Une ambiance qui marque.</span></h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, color: "#A1A1AA", marginTop: 20 }}>
-              MK Sound anime vos anniversaires, soirées privées, mariages, bals, événements associatifs et soirées d'entreprise à Arras, Cambrai, Douai, Péronne, Albert et dans les communes voisines. Déplacement dans les Hauts-de-France selon votre projet.
+              MK Sound anime vos anniversaires, soirées privées, mariages, bals, événements associatifs et soirées d'entreprise à Arras, Cambrai, Douai, Albert et dans les communes voisines. Déplacement dans les Hauts-de-France selon votre projet.
             </p>
           </div>
         </Reveal>
@@ -649,7 +653,7 @@ function Avis() {
 function FAQ() {
   const questions = [
     ["Pour quels événements intervenez-vous ?", "MK Sound anime les mariages, anniversaires, soirées privées, bals, événements associatifs, soirées d'entreprise et autres événements sur mesure dans les Hauts-de-France."],
-    ["Dans quelles villes vous déplacez-vous ?", "Nous intervenons notamment à Arras, Cambrai, Douai, Péronne et Albert. Indiquez le lieu de votre événement dans votre demande pour confirmer la disponibilité."],
+    ["Dans quelles villes vous déplacez-vous ?", "Nous intervenons notamment à Arras, Cambrai, Douai et Albert. Indiquez le lieu de votre événement dans votre demande pour confirmer la disponibilité."],
     ["Peut-on choisir les musiques ?", "Oui. Nous échangeons en amont sur l'ambiance attendue, les styles à privilégier et les titres à éviter afin de préparer une prestation qui vous ressemble."],
     ["Le matériel son et lumière est-il inclus ?", "Selon la formule choisie, MK Sound propose une sonorisation et des jeux de lumières adaptés au lieu, au nombre d'invités et à l'ambiance souhaitée."],
     ["Comment obtenir un devis ?", "Utilisez le formulaire ou appelez directement le 06 65 72 16 61. Précisez la date, le lieu, le type d'événement et le nombre approximatif de participants."],
