@@ -511,7 +511,7 @@ input:-webkit-autofill:focus {
 
 /* Final art direction overrides: declared last so the cinematic system wins over base components. */
 .premium-hero { background: #dcd8cf !important; min-height: min(850px, 100vh) !important; }
-.drone-background { position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; filter:saturate(.78) contrast(.95) brightness(1.08); }
+.youtube-background { position:absolute; z-index:0; top:50%; left:50%; width:177.78vh; min-width:100%; height:56.25vw; min-height:100%; border:0; pointer-events:none; transform:translate(-50%,-50%) scale(1.08); filter:saturate(.74) contrast(.94) brightness(1.05); }
 .drone-wash { position:absolute; inset:0; z-index:0; pointer-events:none; background:linear-gradient(90deg, rgba(239,236,228,.96) 0%, rgba(239,236,228,.78) 36%, rgba(239,236,228,.18) 72%, rgba(239,236,228,.08)), linear-gradient(0deg, rgba(18,31,38,.34), transparent 38%); }
 .premium-hero::before, .hero-aurora, .hero-grain { display:none; }
 .premium-hero > div[style*="maxWidth: 1200"] { max-width:1320px !important; padding:120px 48px 86px !important; }

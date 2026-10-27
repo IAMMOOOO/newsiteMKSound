@@ -168,7 +168,14 @@ function VideoHero() {
       overflow: "hidden",
       paddingTop: 72,
     }}>
-      <video className="drone-background" src="/film/mk-sound-event.mp4#t=66,90" autoPlay muted loop playsInline preload="metadata" aria-hidden="true" />
+      <iframe
+        className="youtube-background"
+        src="https://www.youtube-nocookie.com/embed/JYZ9N5_jqts?autoplay=1&mute=1&controls=0&loop=1&playlist=JYZ9N5_jqts&playsinline=1&rel=0&modestbranding=1"
+        title="Ambiance MK Sound"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        aria-hidden="true"
+        tabIndex="-1"
+      />
       <div className="drone-wash" aria-hidden="true" />
       <div className="hero-aurora hero-aurora-one" aria-hidden="true" />
       <div className="hero-aurora hero-aurora-two" aria-hidden="true" />
