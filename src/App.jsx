@@ -334,7 +334,7 @@ function Galerie() {
       </div>
       <figure className="gallery-film">
         <video src="/film/en-conditions-reelles.mp4" autoPlay muted loop playsInline preload="metadata" aria-label="MK Sound en conditions réelles" />
-        <figcaption><span>En conditions réelles</span><small>DJ set · son · lumière</small></figcaption>
+        <figcaption><span>MK SOUND</span><small>DJ &amp; production événementielle</small></figcaption>
       </figure>
       <figure className="gallery-film gallery-film--drone">
         <video
@@ -347,7 +347,7 @@ function Galerie() {
           onLoadedMetadata={(event) => { event.currentTarget.currentTime = 66; }}
           onTimeUpdate={(event) => { if (event.currentTarget.currentTime >= 71) event.currentTarget.currentTime = 66; }}
         />
-        <figcaption><span>Un final qui marque.</span><small>Plan drone · effets de scène</small></figcaption>
+        <figcaption><span>MK SOUND</span><small>DJ &amp; production événementielle</small></figcaption>
       </figure>
     </section>
   );
