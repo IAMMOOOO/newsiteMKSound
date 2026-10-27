@@ -168,12 +168,15 @@ function VideoHero() {
       overflow: "hidden",
       paddingTop: 72,
     }}>
+      <video className="drone-background" src="/film/mk-sound-event.mp4#t=66,90" autoPlay muted loop playsInline preload="metadata" aria-hidden="true" />
+      <div className="drone-wash" aria-hidden="true" />
       <div className="hero-aurora hero-aurora-one" aria-hidden="true" />
       <div className="hero-aurora hero-aurora-two" aria-hidden="true" />
       <div className="hero-grain" aria-hidden="true" />
       {/* Grid texture */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
+        display: "none",
         backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
         backgroundSize: "80px 80px",
       }} />
@@ -239,7 +242,7 @@ function VideoHero() {
             </Reveal>
           </div>
 
-          {/* Right: cinematic image frame */}
+          {/* Right: the real MK Sound film, playable directly in the page. */}
           <div className="hero-phone-col" style={{ display: "flex", justifyContent: "center", minWidth: 0, alignSelf: "start", marginTop: 0 }}>
             <Reveal delay={2}>
               <div className="hero-phone hero-film-wrap" style={{ position: "relative", width: 440, maxWidth: "100%" }}>
@@ -247,7 +250,7 @@ function VideoHero() {
                   position: "absolute", inset: -50, pointerEvents: "none",
                   background: "radial-gradient(circle, rgba(124,58,237,0.22) 0%, transparent 70%)",
                 }} />
-                <a href="https://www.youtube.com/shorts/JYZ9N5_jqts" target="_blank" rel="noreferrer" className="hero-film" aria-label="Voir MK Sound en vidéo sur YouTube" style={{
+                <div className="hero-film" style={{
                   position: "relative",
                   width: "100%",
                   aspectRatio: "9 / 16",
@@ -257,12 +260,24 @@ function VideoHero() {
                   border: "1px solid rgba(155,92,246,0.18)",
                   boxShadow: "0 48px 96px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.04)",
                 }}>
-                  <img src="/gallery/installation-dj.jpg" alt="Installation DJ MK Sound, son et lumière" className="hero-film-image" />
-                  <span className="hero-film-play" aria-hidden="true">▶</span>
-                  <div className="hero-film-caption" aria-hidden="true">
-                    <span>MK SOUND</span><span>ARRAS · CAMBRAI · DOUAI</span>
-                  </div>
-                </a>
+                  <iframe
+                    className="hero-film-embed"
+                    src="https://www.youtube.com/embed/JYZ9N5_jqts?rel=0&origin=https%3A%2F%2Fmksound-evenementiel.netlify.app"
+                    title="MK Sound — DJ événementiel"
+                    loading="eager"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                  <video
+                    className="drone-intro"
+                    src="/film/mk-sound-event.mp4#t=66,72"
+                    autoPlay
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-hidden="true"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>
@@ -566,8 +581,6 @@ function Avis() {
     { name: "Alyson D.", text: "Très bon DJ, très professionnel ! À la hauteur de nos attentes. Nous avons passé une super soirée ! À l'écoute, soucieux de bien faire ! Vous pouvez foncer les yeux fermés." },
     { name: "Laurent L.", text: "Une très belle prestation conforme à nos attentes, le travail est préparé pour être personnalisé. La gentillesse et la disponibilité sont des atouts qui s'ajoutent au professionnalisme." },
     { name: "Sandrine L.", text: "Musique au top, soirée avec 130 personnes qui ont tous foulé la piste. DJ qui s'adapte à la demande." },
-    { name: "Françoise B.", text: "Superbe animation, très disponible. Une très bonne ambiance générale au top grâce à son professionnalisme." },
-    { name: "Corinne S.", text: "Un DJ très professionnel, très bonne prestation, à la hauteur de notre attente. À refaire avec grand plaisir." },
   ];
 
   return (
@@ -576,8 +589,8 @@ function Avis() {
         <Reveal>
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 24, marginBottom: 64 }}>
             <div>
-              <p className="section-label">Témoignages</p>
-              <h2 className="section-title">Ils nous ont fait confiance</h2>
+              <p className="section-label">Retours d'expérience</p>
+              <h2 className="section-title">Les mots de nos clients</h2>
             </div>
             <div style={{
               display: "flex", alignItems: "center", gap: 10,
@@ -599,22 +612,24 @@ function Avis() {
         <div className="reviews-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
           {temoignages.map((t, i) => (
             <Reveal key={t.name} delay={i * 80}>
-              <div className="review-cell" style={{ height: "100%", padding: 28, borderRadius: 16, border: "1px solid rgba(167,139,250,0.18)", background: "linear-gradient(145deg, rgba(124,58,237,0.13), rgba(13,16,32,0.94) 58%)", boxShadow: "0 18px 42px rgba(0,0,0,0.2)" }}>
-                <div style={{ display: "flex", gap: 2, marginBottom: 16 }}>
+              <article className="review-cell" style={{ height: "100%", padding: 25, borderRadius: 4, border: "1px solid rgba(255,255,255,0.10)", background: "rgba(255,255,255,0.026)" }}>
+                <div className="review-head">
+                  <span className="review-avatar" aria-hidden="true">{t.name.charAt(0)}</span>
+                  <div>
+                    <p className="review-name">{t.name}</p>
+                    <p className="review-origin">Avis Google{t.date ? ` · ${t.date}` : ""}</p>
+                  </div>
+                  <span className="review-google" aria-label="Avis publié sur Google">G</span>
+                </div>
+                <div className="review-stars" aria-label="5 étoiles sur 5">
                   {[...Array(5)].map((_, j) => (
-                    <svg key={j} width="13" height="13" fill="#7C3AED" viewBox="0 0 20 20">
+                    <svg key={j} width="13" height="13" fill="#FBBF24" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
-                <p style={{ fontSize: 17, color: "#FFFFFF", lineHeight: 1.65, marginBottom: 24, fontWeight: 500 }}>
-                  "{t.text}"
-                </p>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center" }}>
-                  <p style={{ fontSize: 14, color: "#EBEBEF", fontWeight: 700 }}>{t.name}</p>
-                  <span style={{ fontSize: 12, color: "rgba(255,255,255,0.45)" }}>{t.date || "Avis Google"}</span>
-                </div>
-              </div>
+                <p className="review-quote">{t.text}</p>
+              </article>
             </Reveal>
           ))}
         </div>
