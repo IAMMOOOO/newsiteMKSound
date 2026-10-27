@@ -196,7 +196,7 @@ function VideoHero() {
               }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#9B5CF6", display: "block", flexShrink: 0 }} />
                 <span style={{ color: "#A78BFA", fontSize: 12, fontWeight: 500, letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                  DJ événementiel — Hauts-de-France
+                  DJ événementiel — autour de Bapaume
                 </span>
               </div>
             </Reveal>
@@ -211,8 +211,8 @@ function VideoHero() {
                 marginBottom: 24,
                 textShadow: "0 0 80px rgba(255,255,255,0.08)",
               }}>
-                DJ & animation événementielle dans le{" "}
-                <span style={{ color: "#9B5CF6" }}>Nord et le Pas-de-Calais</span>
+                DJ & animation événementielle{" "}
+                <span style={{ color: "#9B5CF6" }}>autour de Bapaume</span>
               </h1>
             </Reveal>
 
@@ -220,7 +220,7 @@ function VideoHero() {
               <p style={{ fontSize: 17, color: "#525252", lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
                 Anniversaires, soirées privées, bals, associations, entreprises et événements sur mesure —{" "}
                 <span style={{ color: "#A1A1AA" }}>MK Sound</span>{" "}
-                crée l'ambiance qui vous ressemble dans le Nord, le Pas-de-Calais et les Hauts-de-France.
+                crée l'ambiance qui vous ressemble dans un rayon de 50 km autour de Bapaume : Arras, Cambrai, Douai, Péronne et Albert.
               </p>
             </Reveal>
 
@@ -281,6 +281,34 @@ function VideoHero() {
         }}>
           <div style={{ width: 3, height: 6, background: "#7C3AED", borderRadius: 100, animation: "scrollDown 2s ease-in-out infinite" }} />
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── GALERIE ─────────────────────────────────────────────────────────────── */
+function Galerie() {
+  const photos = [
+    ["/gallery/installation-dj.jpg", "Installation DJ, son et lumière"],
+    ["/gallery/dj-ambiance-1.jpg", "Ambiance lumière personnalisée"],
+    ["/gallery/dj-ambiance-2.jpg", "Matériel professionnel prêt pour votre soirée"],
+    ["/gallery/dj-ambiance-3.jpg", "Une installation adaptée au lieu"],
+    ["/gallery/dj-ambiance-4.jpg", "L'énergie MK Sound"],
+  ];
+  return (
+    <section id="galerie" className="gallery-section">
+      <div className="gallery-intro">
+        <p className="section-label">En images</p>
+        <h2 className="section-title">Une scène pensée<br />pour votre soirée.</h2>
+        <p>Du premier échange au dernier morceau, son, lumière et ambiance sont adaptés à votre lieu et à vos invités.</p>
+      </div>
+      <div className="gallery-grid">
+        {photos.map(([src, alt], index) => (
+          <figure className={`gallery-card gallery-card-${index}`} key={src}>
+            <img src={src} alt={alt} loading={index === 0 ? "eager" : "lazy"} />
+            <figcaption>{alt}</figcaption>
+          </figure>
+        ))}
       </div>
     </section>
   );
@@ -502,16 +530,16 @@ function Differenciation() {
 
 /* ── ZONES D'INTERVENTION ─────────────────────────────────────────────────── */
 function ZonesIntervention() {
-  const villes = ["Cambrai", "Douai", "Valenciennes", "Arras", "Lens", "Béthune", "Lille"];
+  const villes = ["Bapaume", "Arras", "Cambrai", "Douai", "Péronne", "Albert"];
   return (
     <section id="zones" style={{ padding: "100px 0", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
         <Reveal>
           <div style={{ maxWidth: 780 }}>
             <p className="section-label">Zones d'intervention</p>
-            <h2 className="section-title">Votre DJ événementiel<br /><span style={{ color: "#9B5CF6" }}>dans le Nord & le Pas-de-Calais</span></h2>
+            <h2 className="section-title">Votre DJ événementiel<br /><span style={{ color: "#9B5CF6" }}>dans un rayon de 50 km autour de Bapaume</span></h2>
             <p style={{ fontSize: 16, lineHeight: 1.75, color: "#A1A1AA", marginTop: 20 }}>
-              MK Sound anime vos anniversaires, soirées privées, bals, événements associatifs et soirées d'entreprise dans le Nord, le Pas-de-Calais et plus largement les Hauts-de-France. Nous intervenons notamment autour de Cambrai, Douai, Valenciennes, Arras, Lens, Béthune et Lille.
+              MK Sound anime vos anniversaires, soirées privées, mariages, bals, événements associatifs et soirées d'entreprise autour de Bapaume. Nous intervenons notamment à Arras, Cambrai, Douai, Péronne, Albert et dans les communes voisines, dans un rayon de 50 km.
             </p>
           </div>
         </Reveal>
@@ -598,8 +626,8 @@ function Avis() {
 /* ── FAQ ───────────────────────────────────────────────────────────────────── */
 function FAQ() {
   const questions = [
-    ["Pour quels événements intervenez-vous ?", "MK Sound anime les anniversaires, soirées privées, bals, événements associatifs, soirées d'entreprise et autres événements sur mesure dans le Nord et le Pas-de-Calais."],
-    ["Dans quelles villes vous déplacez-vous ?", "Nous intervenons notamment autour de Cambrai, Douai, Valenciennes, Arras, Lens, Béthune et Lille. Indiquez le lieu de votre événement dans votre demande pour confirmer la disponibilité."],
+    ["Pour quels événements intervenez-vous ?", "MK Sound anime les mariages, anniversaires, soirées privées, bals, événements associatifs, soirées d'entreprise et autres événements sur mesure autour de Bapaume."],
+    ["Dans quelles villes vous déplacez-vous ?", "Nous intervenons dans un rayon de 50 km autour de Bapaume, notamment à Arras, Cambrai, Douai, Péronne et Albert. Indiquez le lieu de votre événement dans votre demande pour confirmer la disponibilité."],
     ["Peut-on choisir les musiques ?", "Oui. Nous échangeons en amont sur l'ambiance attendue, les styles à privilégier et les titres à éviter afin de préparer une prestation qui vous ressemble."],
     ["Le matériel son et lumière est-il inclus ?", "Selon la formule choisie, MK Sound propose une sonorisation et des jeux de lumières adaptés au lieu, au nombre d'invités et à l'ambiance souhaitée."],
     ["Comment obtenir un devis ?", "Utilisez le formulaire ou appelez directement le 06 65 72 16 61. Précisez la date, le lieu, le type d'événement et le nombre approximatif de participants."],
@@ -801,11 +829,51 @@ function Footer() {
     }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
         <Logo small />
-        <p style={{ fontSize: 13, color: "#3F3F46" }}>DJ & animation événementielle — Nord, Pas-de-Calais & Hauts-de-France</p>
+        <p style={{ fontSize: 13, color: "#3F3F46" }}>DJ & animation événementielle — autour de Bapaume</p>
         <a href="tel:+33665721661" style={{ fontSize: 13, color: "#A78BFA", fontWeight: 600, textDecoration: "none" }}>06 65 72 16 61</a>
-        <p style={{ fontSize: 12, color: "#27272A" }}>© {new Date().getFullYear()} MK Sound</p>
+        <div className="footer-legal">
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/confidentialite/">Confidentialité</a>
+          <a href="/cookies/">Cookies</a>
+        </div>
+        <p style={{ fontSize: 12, color: "#71717A" }}>© {new Date().getFullYear()} MK Sound</p>
       </div>
     </footer>
+  );
+}
+
+function CookieConsent() {
+  const [open, setOpen] = useState(() => !localStorage.getItem("mksound-cookie-choice"));
+  const loadAnalytics = () => {
+    if (document.querySelector('script[data-mksound-analytics]')) return;
+    const script = document.createElement("script");
+    script.async = true;
+    script.dataset.mksoundAnalytics = "true";
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-S7G8C2G3V0";
+    document.head.appendChild(script);
+    window.gtag("js", new Date());
+    window.gtag("config", "G-S7G8C2G3V0");
+  };
+  useEffect(() => {
+    if (localStorage.getItem("mksound-cookie-choice") === "accepted") loadAnalytics();
+  }, []);
+  const save = (choice) => {
+    localStorage.setItem("mksound-cookie-choice", choice);
+    if (choice === "accepted") loadAnalytics();
+    setOpen(false);
+  };
+  if (!open) return null;
+  return (
+    <aside className="cookie-banner" aria-label="Préférences de cookies">
+      <div>
+        <strong>Votre vie privée compte.</strong>
+        <p>Nous utilisons des cookies de mesure uniquement avec votre accord pour améliorer le site. <a href="/cookies/">En savoir plus</a></p>
+      </div>
+      <div className="cookie-actions">
+        <button className="btn-ghost" onClick={() => save("refused")}>Refuser</button>
+        <button className="btn-primary" onClick={() => save("accepted")}>Accepter</button>
+      </div>
+    </aside>
   );
 }
 
@@ -826,6 +894,7 @@ export default function App() {
     <div style={{ background: "#111218", minHeight: "100vh" }}>
       <Nav />
       <VideoHero />
+      <Galerie />
       <Marquee />
       <SocialProof />
       <Offres />
@@ -838,6 +907,7 @@ export default function App() {
       <Formulaire />
       <Footer />
       <StickyMobileCTA />
+      <CookieConsent />
     </div>
   );
 }
