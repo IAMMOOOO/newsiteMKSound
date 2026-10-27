@@ -230,10 +230,8 @@ function VideoHero() {
             </Reveal>
 
             <Reveal delay={2}>
-              <p style={{ fontSize: 17, color: "#525252", lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
-                Anniversaires, soirées privées, bals, associations, entreprises et événements sur mesure —{" "}
-                <span style={{ color: "#A1A1AA" }}>MK Sound</span>{" "}
-                imagine une signature sonore et lumière sur mesure pour vos mariages, anniversaires et événements à Arras, Cambrai, Douai et dans les Hauts-de-France.
+              <p className="hero-description" style={{ fontSize: 17, color: "#525252", lineHeight: 1.7, marginBottom: 40, maxWidth: 480 }}>
+                Des événements sur mesure à Arras, Cambrai et Douai. <span className="hero-brand">MK SOUND</span> imagine la bande-son de votre soirée.
               </p>
             </Reveal>
 

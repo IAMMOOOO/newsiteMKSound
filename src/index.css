@@ -529,6 +529,7 @@ input:-webkit-autofill:focus {
 .premium-hero .hero-title { color:#17242b !important; max-width:9ch; text-shadow:none !important; }
 .premium-hero .hero-title span { color:#7c574d !important; }
 .premium-hero p { color:#314149 !important; }
+.premium-hero .hero-brand { color:#17242b; font-weight:850; letter-spacing:.09em; font-size:1.35em; }
 .premium-hero .section-label { color:#6b4940 !important; }
 .premium-hero .btn-primary { background:#17242b; box-shadow:none; }
 .premium-hero .btn-primary:hover { background:#314149; }
@@ -581,4 +582,25 @@ details[open] { background: rgba(124,58,237,.12) !important; border-color: rgba(
   .pricing-card--featured { transform: none; }
   .gallery-film { height: 330px; margin-top: 28px; }
   .gallery-film figcaption span { font-size: 12px; }
+}
+
+/* Mobile hero: one calm composition, without YouTube interface overlays. */
+@media (max-width: 760px) {
+  .premium-hero {
+    min-height: 720px !important;
+    background:
+      linear-gradient(90deg, rgba(239,236,228,.86) 0%, rgba(239,236,228,.67) 52%, rgba(239,236,228,.25) 100%),
+      url('/gallery/dj-ambiance-4.jpg') center / cover no-repeat !important;
+  }
+  .youtube-background { display: none !important; }
+  .drone-wash { display: none; }
+  .premium-hero > div[style*="maxWidth: 1200"] { padding: 142px 28px 108px !important; }
+  .premium-hero .hero-layout { display: block !important; }
+  .premium-hero .hero-phone-col { display: none !important; }
+  .premium-hero .hero-layout > div:first-child > div:first-child { display: none !important; }
+  .premium-hero .hero-title { max-width: 8ch; font-size: clamp(48px, 14vw, 64px) !important; line-height: .96 !important; margin-bottom: 24px !important; }
+  .premium-hero .hero-description { max-width: 25ch !important; font-size: 16px !important; line-height: 1.55 !important; margin-bottom: 30px !important; }
+  .premium-hero .hero-brand { display: block; margin: 12px 0 8px; color: #17242b; font-size: 1.7em; font-weight: 850; letter-spacing: .1em; line-height: 1; }
+  .premium-hero .btn-ghost { display: none !important; }
+  .premium-hero .btn-primary { padding: 15px 22px !important; }
 }
