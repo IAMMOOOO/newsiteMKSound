@@ -101,6 +101,9 @@ details[open] { background: rgba(124,58,237,.12) !important; border-color: rgba(
 .gallery-film figcaption { position: absolute; z-index: 1; left: clamp(20px, 5vw, 64px); bottom: clamp(20px, 5vw, 54px); color: #fff; display: grid; gap: 8px; }
 .gallery-film figcaption span { font-family: Iowan Old Style, Baskerville, Georgia, serif; font-size: clamp(30px, 5vw, 62px); letter-spacing: -.055em; }
 .gallery-film figcaption small { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #ddd4ff; }
+.gallery-film--drone { height: min(38vw, 360px); margin-top: 18px; }
+.gallery-film--drone video { object-position: center 55%; }
+.gallery-film--drone::after { background: linear-gradient(90deg, rgba(9,9,14,.72), transparent 60%), linear-gradient(0deg, rgba(9,9,14,.54), transparent 45%); }
 .footer-legal { display: flex; flex-wrap: wrap; gap: 14px; }
 .footer-legal a { color: #A1A1AA; font-size: 12px; text-decoration: none; }
 .footer-legal a:hover { color: #fff; }
