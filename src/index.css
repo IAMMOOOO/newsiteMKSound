@@ -511,8 +511,8 @@ input:-webkit-autofill:focus {
 
 /* Final art direction overrides: declared last so the cinematic system wins over base components. */
 .premium-hero { background: #dcd8cf !important; min-height: min(850px, 100vh) !important; }
-.drone-background { position:absolute; inset:0; z-index:-4; width:100%; height:100%; object-fit:cover; filter:saturate(.78) contrast(.95) brightness(1.08); }
-.drone-wash { position:absolute; inset:0; z-index:-3; pointer-events:none; background:linear-gradient(90deg, rgba(239,236,228,.96) 0%, rgba(239,236,228,.78) 36%, rgba(239,236,228,.18) 72%, rgba(239,236,228,.08)), linear-gradient(0deg, rgba(18,31,38,.34), transparent 38%); }
+.drone-background { position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; filter:saturate(.78) contrast(.95) brightness(1.08); }
+.drone-wash { position:absolute; inset:0; z-index:0; pointer-events:none; background:linear-gradient(90deg, rgba(239,236,228,.96) 0%, rgba(239,236,228,.78) 36%, rgba(239,236,228,.18) 72%, rgba(239,236,228,.08)), linear-gradient(0deg, rgba(18,31,38,.34), transparent 38%); }
 .premium-hero::before, .hero-aurora, .hero-grain { display:none; }
 .premium-hero > div[style*="maxWidth: 1200"] { max-width:1320px !important; padding:120px 48px 86px !important; }
 .premium-hero .hero-layout { grid-template-columns:minmax(0, .9fr) minmax(360px, 1.1fr) !important; }
