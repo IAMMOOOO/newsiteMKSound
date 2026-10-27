@@ -725,7 +725,7 @@ function Formulaire() {
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({ ...form, _subject: "Nouvelle demande de devis — MK Sound" }),
       });
-      if (res.ok) setSubmitted(true);
+      if (res.ok) window.location.assign("/demande-recue/");
     } catch {
       // silent fail
     } finally {
