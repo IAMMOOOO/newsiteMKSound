@@ -648,7 +648,7 @@ function Avis() {
         <div className="reviews-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
           {temoignages.map((t, i) => (
             <Reveal key={t.name} delay={i * 80}>
-              <article className="review-cell" style={{ height: "100%", padding: 25, borderRadius: 4, border: "1px solid rgba(255,255,255,0.10)", background: "rgba(255,255,255,0.026)" }}>
+              <article className="review-cell" style={{ "--review-index": i, height: "100%", padding: 25, borderRadius: 4, border: "1px solid rgba(255,255,255,0.10)", background: "rgba(255,255,255,0.026)" }}>
                 <div className="review-head">
                   <span className="review-avatar" aria-hidden="true">{t.name.charAt(0)}</span>
                   <div>
