@@ -635,6 +635,9 @@ details[open] { background: rgba(124,58,237,.12) !important; border-color: rgba(
 /* Final corrections: keep the first hero line below the fixed navigation. */
 .premium-hero > div[style*="maxWidth: 1200"] { padding-top: 190px !important; }
 
+/* A fixed navigation must not cover the heading reached from an anchor link. */
+#offres, #avis, #faq, #contact, #zones { scroll-margin-top: 96px; }
+
 /* Reviews already use the site-wide scroll reveal. Keep their motion calm and stable. */
 .review-cell { animation: none !important; transform: none; }
 .review-cell::before { opacity: 0; transform: translateX(-88%); }
