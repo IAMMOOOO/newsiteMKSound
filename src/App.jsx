@@ -158,6 +158,13 @@ function Nav() {
 
 /* ── VIDEO HERO ────────────────────────────────────────────────────────────── */
 function VideoHero() {
+  const [clubIntroVisible, setClubIntroVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setClubIntroVisible(false), 2600);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   return (
     <section id="video-hero" className="premium-hero" style={{
       background: "#111218",
@@ -175,6 +182,15 @@ function VideoHero() {
         allow="autoplay; encrypted-media; picture-in-picture"
         aria-hidden="true"
         tabIndex="-1"
+      />
+      <video
+        className={`club-intro ${clubIntroVisible ? "" : "club-intro--hidden"}`}
+        src="/film/en-conditions-reelles.mp4"
+        autoPlay
+        muted
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
       />
       <div className="drone-wash" aria-hidden="true" />
       <div className="hero-aurora hero-aurora-one" aria-hidden="true" />

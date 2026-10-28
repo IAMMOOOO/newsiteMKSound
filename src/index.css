@@ -520,7 +520,9 @@ input:-webkit-autofill:focus {
 
 /* Final art direction overrides: declared last so the cinematic system wins over base components. */
 .premium-hero { background: #dcd8cf !important; min-height: min(850px, 100vh) !important; }
-.youtube-background { position:absolute; z-index:0; top:50%; left:50%; width:177.78vh; min-width:100%; height:56.25vw; min-height:100%; border:0; pointer-events:none; transform:translate(-50%,-50%) scale(1.08); filter:saturate(.74) contrast(.94) brightness(1.05); }
+.youtube-background { position:absolute; z-index:0; top:50%; left:50%; width:177.78vh; min-width:100%; height:56.25vw; min-height:100%; border:0; pointer-events:none; transform:translate(-50%,-50%) scale(1.02); filter:saturate(.9) contrast(1.08) brightness(.9); }
+.club-intro { position:absolute; z-index:0; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; pointer-events:none; opacity:1; transition:opacity 900ms cubic-bezier(.16,1,.3,1); filter:saturate(.92) contrast(1.08) brightness(.9); }
+.club-intro--hidden { opacity:0; }
 .drone-wash { position:absolute; inset:0; z-index:0; pointer-events:none; background:linear-gradient(90deg, rgba(239,236,228,.96) 0%, rgba(239,236,228,.78) 36%, rgba(239,236,228,.18) 72%, rgba(239,236,228,.08)), linear-gradient(0deg, rgba(18,31,38,.34), transparent 38%); }
 .premium-hero::before, .hero-aurora, .hero-grain { display:none; }
 .premium-hero > div[style*="maxWidth: 1200"] { max-width:1320px !important; padding:120px 48px 86px !important; }
@@ -551,7 +553,7 @@ input:-webkit-autofill:focus {
 .review-cell { border-radius:0 !important; background:#f8f6f0 !important; border-color:rgba(23,36,43,.18) !important; }
 .review-name, .review-quote { color:#17242b !important; }
 .review-origin { color:#657377; }
-@media (max-width: 760px) { .premium-hero > div[style*="maxWidth: 1200"] { padding:120px 24px 84px !important; } .premium-hero .hero-layout { grid-template-columns:1fr !important; } .premium-hero .hero-phone-col { display:none !important; } .youtube-background { width:100vw; min-width:0; height:100%; min-height:0; transform:translate(-50%,-50%); } .drone-wash { background:linear-gradient(90deg, rgba(239,236,228,.94), rgba(239,236,228,.42)), linear-gradient(0deg,rgba(18,31,38,.28),transparent); } .reviews-grid { grid-template-columns:1fr !important; } .gallery-grid { grid-template-columns:1fr 1fr; } }
+@media (max-width: 760px) { .premium-hero > div[style*="maxWidth: 1200"] { padding:120px 24px 84px !important; } .premium-hero .hero-layout { grid-template-columns:1fr !important; } .premium-hero .hero-phone-col { display:none !important; } .youtube-background { width:177.78vh; min-width:100%; height:56.25vw; min-height:100%; transform:translate(-50%,-50%) scale(.92); } .drone-wash { background:linear-gradient(90deg, rgba(239,236,228,.94), rgba(239,236,228,.42)), linear-gradient(0deg,rgba(18,31,38,.28),transparent); } .reviews-grid { grid-template-columns:1fr !important; } .gallery-grid { grid-template-columns:1fr 1fr; } }
 .gallery-intro { grid-template-columns: .26fr 1.2fr .75fr; position: relative; }
 .gallery-grid { grid-template-columns: 1.15fr .85fr .7fr; grid-template-rows: 300px 300px; gap: 18px; position: relative; }
 .gallery-card { border-radius: 2px; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 28px 60px rgba(0,0,0,.2); }
@@ -584,16 +586,19 @@ details[open] { background: rgba(124,58,237,.12) !important; border-color: rgba(
   .gallery-film figcaption span { font-size: 12px; }
 }
 
-/* Mobile hero: one calm composition, without YouTube interface overlays. */
+/* Mobile hero: a short club opening, then the full MK Sound YouTube montage. */
 @media (max-width: 760px) {
   .premium-hero {
-    min-height: 720px !important;
-    background:
-      linear-gradient(90deg, rgba(239,236,228,.86) 0%, rgba(239,236,228,.67) 52%, rgba(239,236,228,.25) 100%),
-      url('/gallery/dj-ambiance-4.jpg') center / cover no-repeat !important;
+    min-height: 680px !important;
+    background: #111218 !important;
   }
-  .youtube-background { display: none !important; }
-  .drone-wash { display: none; }
+  .youtube-background { display: block !important; }
+  .drone-wash {
+    display: block;
+    background:
+      linear-gradient(90deg, rgba(239,236,228,.74) 0%, rgba(239,236,228,.55) 45%, rgba(239,236,228,.20) 100%),
+      linear-gradient(0deg, rgba(18,31,38,.28), transparent 42%);
+  }
   .premium-hero > div[style*="maxWidth: 1200"] { padding: 142px 28px 108px !important; }
   .premium-hero .hero-layout { display: block !important; }
   .premium-hero .hero-phone-col { display: none !important; }
