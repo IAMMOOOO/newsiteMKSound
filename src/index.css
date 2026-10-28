@@ -685,6 +685,22 @@ details[open] { background: rgba(124,58,237,.12) !important; border-color: rgba(
   transform: translate(-50%, -50%) scale(1.24) !important;
   filter: saturate(1.04) contrast(1.12) brightness(.72) !important;
 }
+
+.hero-sound-toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.82);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: .02em;
+  padding: 13px 4px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.hero-sound-toggle:hover, .hero-sound-toggle:focus-visible { color: #fff; }
 .club-intro {
   filter: saturate(1.05) contrast(1.1) brightness(.72) !important;
 }

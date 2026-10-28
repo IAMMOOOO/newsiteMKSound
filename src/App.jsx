@@ -159,6 +159,7 @@ function Nav() {
 /* ── VIDEO HERO ────────────────────────────────────────────────────────────── */
 function VideoHero() {
   const [clubIntroVisible, setClubIntroVisible] = useState(true);
+  const [soundOn, setSoundOn] = useState(false);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setClubIntroVisible(false), 2600);
@@ -176,8 +177,9 @@ function VideoHero() {
       paddingTop: 72,
     }}>
       <iframe
+        key={soundOn ? "sound-on" : "sound-off"}
         className="youtube-background"
-        src="https://www.youtube-nocookie.com/embed/JYZ9N5_jqts?autoplay=1&mute=1&controls=0&loop=1&playlist=JYZ9N5_jqts&playsinline=1&rel=0&modestbranding=1"
+        src={`https://www.youtube-nocookie.com/embed/JYZ9N5_jqts?autoplay=1&mute=${soundOn ? 0 : 1}&controls=0&loop=1&playlist=JYZ9N5_jqts&playsinline=1&rel=0&modestbranding=1`}
         title="Ambiance MK Sound"
         allow="autoplay; encrypted-media; picture-in-picture"
         aria-hidden="true"
@@ -259,6 +261,14 @@ function VideoHero() {
                 <a href="#offres" className="btn-ghost" style={{ padding: "13px 28px", fontSize: 15 }}>
                   Voir les formules
                 </a>
+                <button
+                  type="button"
+                  onClick={() => setSoundOn((value) => !value)}
+                  className="hero-sound-toggle"
+                  aria-pressed={soundOn}
+                >
+                  {soundOn ? "Couper le son" : "Activer l’ambiance"}
+                </button>
               </div>
             </Reveal>
           </div>
