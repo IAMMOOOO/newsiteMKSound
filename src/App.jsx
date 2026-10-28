@@ -613,6 +613,7 @@ function ZonesIntervention() {
 /* ── AVIS ──────────────────────────────────────────────────────────────────── */
 function Avis() {
   const temoignages = [
+    { name: "Guillaume Moncomble", text: "Animation années 80 organisée par l'amicale des pompiers de Vitry. Très bonne ambiance, les gens ont été ravis !!!", date: "Il y a 13 heures · Nouveau", stars: 4 },
     { name: "Sarah Schotté", text: "Recommande vivement pour un mariage, personne très à l'écoute avec un bon instinct musical en fonction du moment de la soirée, encore un grand merci.", date: "Octobre 2026" },
     { name: "Muriel Dris", text: "Super DJ, très bonne ambiance. Il a adapté le son en fonction du public. Nous avons passé une très bonne soirée.", date: "Avril 2026" },
     { name: "Malena E.", text: "Un immense merci à notre DJ Max pour cette soirée absolument mémorable ! L'ambiance était parfaite du début à la fin. Il a su lire la foule à la perfection et créer une énergie incroyable." },
@@ -642,7 +643,7 @@ function Avis() {
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
               </svg>
-              <span style={{ fontSize: 13, color: "#EBEBEF", fontWeight: 700 }}>5,0/5 · 8 avis Google</span>
+              <span style={{ fontSize: 13, color: "#EBEBEF", fontWeight: 700 }}>5,0/5 · 9 avis Google</span>
             </div>
           </div>
         </Reveal>
@@ -659,9 +660,9 @@ function Avis() {
                   </div>
                   <span className="review-google" aria-label="Avis publié sur Google">G</span>
                 </div>
-                <div className="review-stars" aria-label="5 étoiles sur 5">
+                <div className="review-stars" aria-label={`${t.stars ?? 5} étoiles sur 5`}>
                   {[...Array(5)].map((_, j) => (
-                    <svg key={j} width="13" height="13" fill="#FBBF24" viewBox="0 0 20 20">
+                    <svg key={j} width="13" height="13" fill={j < (t.stars ?? 5) ? "#FBBF24" : "transparent"} stroke={j < (t.stars ?? 5) ? "none" : "#D4A72C"} strokeWidth="1.5" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
