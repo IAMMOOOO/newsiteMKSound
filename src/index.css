@@ -631,3 +631,17 @@ details[open] { background: rgba(124,58,237,.12) !important; border-color: rgba(
   .premium-hero .btn-ghost { display: none !important; }
   .premium-hero .btn-primary { padding: 15px 22px !important; }
 }
+
+/* Final corrections: keep the first hero line below the fixed navigation. */
+.premium-hero > div[style*="maxWidth: 1200"] { padding-top: 190px !important; }
+
+/* Reviews already use the site-wide scroll reveal. Keep their motion calm and stable. */
+.review-cell { animation: none !important; transform: none; }
+.review-cell::before { opacity: 0; transform: translateX(-88%); }
+.review-cell:hover { transform: translateY(-4px) !important; }
+.review-cell:hover::before { opacity: 1; transform: translateX(88%); }
+.review-cell:hover .review-stars svg { transform: scale(1.08); }
+
+@media (max-width: 760px) {
+  .premium-hero > div[style*="maxWidth: 1200"] { padding-top: 170px !important; }
+}

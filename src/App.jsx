@@ -614,9 +614,14 @@ function ZonesIntervention() {
 function Avis() {
   const temoignages = [
     { name: "Guillaume Moncomble", text: "Animation années 80 organisée par l'amicale des pompiers de Vitry. Très bonne ambiance, les gens ont été ravis !!!", date: "Il y a 13 heures · Nouveau", stars: 4 },
+    { name: "Sarah Schotté", text: "Recommande vivement pour un mariage, personne très à l'écoute avec un bon instinct musical en fonction du moment de la soirée, encore un grand merci.", date: "Il y a un an", stars: 5 },
     { name: "MURIEL DRIS", text: "Super dj, très bonne ambiance. Il a adapté le son en fonction du public. Nous avons passé une très bonne soirée", date: "Il y a 6 mois", stars: 5 },
     { name: "Malena Elahouel", text: "Un immense merci à notre DJ Max pour cette soirée absolument mémorable ! L'ambiance était tout simplement parfaite du début à la fin. Il a su lire la foule à la perfection et créer une énergie incroyable.", date: "Il y a un an", stars: 5 },
     { name: "alyson dubois", text: "Très bon DJ, très professionnel ! À la hauteur de nos attentes. Nous avons passés une super soirée ! À l’écoute, soucieux de bien faire ! Vous pouvez foncer les yeux fermés ☺️", date: "Il y a un an", stars: 5 },
+    { name: "Laurent L.", text: "Une très belle prestation conforme à nos attentes, le travail est préparé pour être personnalisé. La gentillesse et la disponibilité sont des atouts qui s'ajoutent au professionnalisme.", date: "Il y a un an", stars: 5 },
+    { name: "Sandrine L.", text: "Musique au top, soirée avec 130 personnes qui ont tous foulé la piste. DJ qui s'adapte à la demande.", date: "Il y a un an", stars: 5 },
+    { name: "Françoise B.", text: "Superbe animation, très disponible. Une très bonne ambiance générale au top grâce à son professionnalisme.", date: "Il y a un an", stars: 5 },
+    { name: "Corinne S.", text: "Un DJ très professionnel, très bonne prestation, à la hauteur de notre attente. À refaire avec grand plaisir.", date: "Il y a un an", stars: 5 },
   ];
 
   return (
