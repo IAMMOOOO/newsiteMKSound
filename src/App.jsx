@@ -944,8 +944,68 @@ function StickyMobileCTA() {
   );
 }
 
+const conseils = [
+  {
+    slug: "enceinte-ou-dj-anniversaire",
+    title: "Enceinte ou DJ pour un anniversaire : que choisir ?",
+    intro: "Le bon choix dépend du nombre d'invités, du lieu et de l'ambiance que vous voulez créer.",
+    body: [
+      "Une enceinte et une playlist peuvent convenir à un petit repas. Dès que la soirée rassemble du monde, le son, les transitions et le rythme deviennent essentiels.",
+      "Un DJ adapte la musique aux invités, gère les temps forts et apporte une sonorisation pensée pour le lieu. C'est aussi la tranquillité de ne pas devoir gérer la musique pendant votre propre soirée.",
+      "Pour un anniversaire à Arras, Cambrai ou Douai, le plus simple est de préciser votre lieu, votre date et le nombre de personnes : nous vous indiquons la formule adaptée."
+    ]
+  },
+  {
+    slug: "dj-ou-playlist-soiree-privee",
+    title: "DJ ou playlist pour une soirée privée ?",
+    intro: "Une playlist diffuse des morceaux. Un DJ lit une salle et construit une ambiance.",
+    body: [
+      "La playlist est une solution pratique lorsque la musique reste en arrière-plan. Pour une vraie soirée dansante, elle ne répond pas aux réactions de vos invités.",
+      "Avec un DJ, les styles, les tempos et les moments clés évoluent en direct. Le matériel son et lumière est dimensionné pour le lieu, sans bricolage ni coupure.",
+      "Le résultat : une piste qui vit, une organisation plus sereine et une soirée qui ressemble vraiment à vos invités."
+    ]
+  },
+  {
+    slug: "choisir-dj-mariage-arras",
+    title: "Comment choisir son DJ de mariage à Arras ?",
+    intro: "La technique compte, mais l'écoute et la préparation font toute la différence le jour J.",
+    body: [
+      "Demandez comment seront préparés les moments importants : entrée des mariés, discours, ouverture de bal et fin de soirée. Un bon DJ échange avec vous avant le mariage.",
+      "Vérifiez également l'adaptation du matériel à votre salle et la coordination avec vos autres prestataires. Une installation anticipée évite le stress inutile.",
+      "MK Sound accompagne les mariages autour d'Arras, Cambrai, Douai et Péronne avec une préparation musicale sur mesure."
+    ]
+  }
+];
+
+function Conseils() {
+  return <section id="conseils" className="conseils-section">
+    <div className="conseils-inner">
+      <p className="section-label">Conseils événementiels</p>
+      <h2 className="section-title">Bien préparer<br />votre soirée.</h2>
+      <p className="conseils-lead">Des réponses concrètes pour choisir votre animation, votre musique et votre matériel sans vous tromper.</p>
+      <div className="conseils-grid">
+        {conseils.map((article) => <a className="conseil-card" href={`/conseils/${article.slug}/`} key={article.slug}>
+          <span>GUIDE MK SOUND</span><h3>{article.title}</h3><p>{article.intro}</p><b>Lire le guide</b>
+        </a>)}
+      </div>
+    </div>
+  </section>;
+}
+
+function ArticlePage({ article }) {
+  useEffect(() => { document.title = `${article.title} | MK Sound`; }, [article]);
+  return <div className="article-page"><Nav /><main className="article-main">
+    <a href="/" className="article-back">← Retour au site MK Sound</a>
+    <p className="section-label">Conseils événementiels</p><h1>{article.title}</h1><p className="article-intro">{article.intro}</p>
+    {article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+    <button className="btn-primary" onClick={() => { window.location.href = "/#contact"; }}>Vérifier la disponibilité</button>
+  </main><Footer /></div>;
+}
+
 /* ── APP ───────────────────────────────────────────────────────────────────── */
 export default function App() {
+  const article = conseils.find((item) => window.location.pathname === `/conseils/${item.slug}/`);
+  if (article) return <ArticlePage article={article} />;
   return (
     <div style={{ background: "#111218", minHeight: "100vh" }}>
       <Nav />
@@ -958,6 +1018,7 @@ export default function App() {
       <ZonesIntervention />
       <Avis />
       <FAQ />
+      <Conseils />
       <Process />
       <Urgence />
       <Formulaire />
