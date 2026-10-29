@@ -358,20 +358,19 @@ function Galerie() {
       </div>
       <figure className="gallery-film">
         <video src="/film/en-conditions-reelles.mp4" autoPlay muted loop playsInline preload="metadata" aria-label="MK Sound en conditions réelles" />
-        <figcaption><span>MK SOUND</span><small>DJ &amp; production événementielle</small></figcaption>
       </figure>
-      <figure className="gallery-film gallery-film--drone">
+      <figure className="gallery-film gallery-film--drone" aria-label="Effets de scène MK Sound">
         <video
+          className="drone-kinetic"
           src="/film/mk-sound-event.mp4#t=66,71"
           autoPlay
           muted
+          loop
           playsInline
           preload="metadata"
-          aria-label="Effets de scène MK Sound"
           onLoadedMetadata={(event) => { event.currentTarget.currentTime = 66; }}
           onTimeUpdate={(event) => { if (event.currentTarget.currentTime >= 71) event.currentTarget.currentTime = 66; }}
         />
-        <figcaption><span>MK SOUND</span><small>DJ &amp; production événementielle</small></figcaption>
       </figure>
     </section>
   );
@@ -959,30 +958,28 @@ const conseils = [
     slug: "enceinte-ou-dj-anniversaire",
     title: "Enceinte ou DJ pour un anniversaire : que choisir ?",
     intro: "Le bon choix dépend du nombre d'invités, du lieu et de l'ambiance que vous voulez créer.",
-    body: [
-      "Une enceinte et une playlist peuvent convenir à un petit repas. Dès que la soirée rassemble du monde, le son, les transitions et le rythme deviennent essentiels.",
-      "Un DJ adapte la musique aux invités, gère les temps forts et apporte une sonorisation pensée pour le lieu. C'est aussi la tranquillité de ne pas devoir gérer la musique pendant votre propre soirée.",
-      "Pour un anniversaire à Arras, Cambrai ou Douai, le plus simple est de préciser votre lieu, votre date et le nombre de personnes : nous vous indiquons la formule adaptée."
+    sections: [
+      { heading: "Quand une enceinte suffit vraiment", paragraphs: ["Pour un apéritif, un repas ou une soirée à moins de vingt personnes, une enceinte Bluetooth de bonne qualité peut être suffisante. L'idée est d'avoir un fond musical agréable, pas de sonoriser une piste de danse.", "Une JBL PartyBox est un exemple simple et courant pour un petit espace privé : elle est pratique, autonome et facile à connecter. Vérifiez toutefois le volume autorisé, l'autonomie réelle, la distance avec les voisins et prévoyez une prise électrique. Une enceinte ne remplace pas une installation adaptée si la salle est grande ou résonne."], bullets: ["Repas ou jardin calme : une enceinte bien placée, jamais cachée au sol.", "Préparez une rallonge, un chargeur et un téléphone de secours.", "Évitez de pousser le volume au maximum : le son sature vite et fatigue les invités."] },
+      { heading: "La playlist : préparez-la comme un vrai conducteur", paragraphs: ["Spotify permet de gagner du temps, à condition de ne pas lancer une liste au hasard. Créez une playlist collaborative deux semaines avant : les invités peuvent proposer leurs titres, tandis que vous gardez la main sur l'ordre final.", "Activez le fondu enchaîné, désactivez les lectures aléatoires surprises et préparez trois moments distincts : accueil et repas, montée progressive, puis danse. Téléchargez la playlist hors ligne : le Wi-Fi d'une salle des fêtes n'est jamais une garantie."], bullets: ["30 à 40 titres calmes pour l'accueil et le repas.", "Un dossier 'valeurs sûres' pour relancer la piste si elle se vide.", "Une liste à éviter : c'est souvent plus utile que dix demandes de chansons."] },
+      { heading: "Quand le DJ devient le meilleur choix", paragraphs: ["Dès qu'il y a une piste de danse, des générations différentes, des discours ou plus d'une trentaine d'invités, un DJ apporte autre chose qu'une suite de morceaux. Il lit la salle, change de style au bon moment, gère les demandes et maintient le rythme sans que l'organisateur quitte ses invités.", "Il apporte aussi une sonorisation cohérente : enceintes adaptées au lieu, micros pour les prises de parole, lumière, installation et démontage. Pour un anniversaire à Arras, Cambrai ou Douai, indiquez simplement la date, le lieu, le nombre d'invités et l'ambiance recherchée : la formule peut ensuite être ajustée."], note: "Le bon raccourci : enceinte + playlist pour une ambiance de fond ; DJ dès que vous voulez une soirée dansante, fluide et sans logistique à gérer." }
     ]
   },
   {
     slug: "dj-ou-playlist-soiree-privee",
     title: "DJ ou playlist pour une soirée privée ?",
     intro: "Une playlist diffuse des morceaux. Un DJ lit une salle et construit une ambiance.",
-    body: [
-      "La playlist est une solution pratique lorsque la musique reste en arrière-plan. Pour une vraie soirée dansante, elle ne répond pas aux réactions de vos invités.",
-      "Avec un DJ, les styles, les tempos et les moments clés évoluent en direct. Le matériel son et lumière est dimensionné pour le lieu, sans bricolage ni coupure.",
-      "Le résultat : une piste qui vit, une organisation plus sereine et une soirée qui ressemble vraiment à vos invités."
+    sections: [
+      { heading: "Le vrai coût d'une playlist", paragraphs: ["Une playlist paraît gratuite, mais elle demande une personne qui surveille le volume, les changements de morceaux, les demandes, le téléphone connecté et les imprévus. Pendant ce temps-là, cette personne ne profite pas de la soirée.", "Si vous partez sur Spotify, préparez la musique hors ligne et évitez les publicités avec un compte adapté. Testez aussi le Bluetooth dans la pièce avant le jour J : les coupures et les notifications du téléphone arrivent toujours au mauvais moment."], bullets: ["Un téléphone ou une tablette réservée à la musique.", "Deux câbles / chargeurs et une playlist téléchargée.", "Une personne clairement désignée pour gérer la musique."] },
+      { heading: "Ce qu'un DJ apporte en plus", paragraphs: ["Un DJ ne se contente pas d'enchaîner des titres. Il observe la réaction de la salle, ajuste le tempo, raccourcit un passage qui ne prend pas et relance avec le bon morceau. Il peut aussi préparer les annonces, les discours, l'arrivée d'un gâteau ou d'une surprise.", "L'installation est pensée pour votre salle : diffusion homogène, volume maîtrisé, micros audibles et lumière qui accompagne la soirée. Résultat : moins de contraintes techniques et plus de moments vécus avec vos invités."], note: "Une soirée privée peut rester simple tout en étant très bien animée : le point important est d'adapter la formule au lieu et au nombre de personnes, pas de suréquiper." }
     ]
   },
   {
     slug: "choisir-dj-mariage-arras",
     title: "Comment choisir son DJ de mariage à Arras ?",
     intro: "La technique compte, mais l'écoute et la préparation font toute la différence le jour J.",
-    body: [
-      "Demandez comment seront préparés les moments importants : entrée des mariés, discours, ouverture de bal et fin de soirée. Un bon DJ échange avec vous avant le mariage.",
-      "Vérifiez également l'adaptation du matériel à votre salle et la coordination avec vos autres prestataires. Une installation anticipée évite le stress inutile.",
-      "MK Sound accompagne les mariages autour d'Arras, Cambrai, Douai et Péronne avec une préparation musicale sur mesure."
+    sections: [
+      { heading: "Les cinq questions à poser avant de réserver", paragraphs: ["Un échange clair avant le mariage évite presque tous les malentendus. Ne choisissez pas uniquement sur une playlist ou un prix : demandez comment votre soirée sera préparée et qui sera réellement présent le jour J."], bullets: ["Comment préparez-vous l'entrée des mariés, les discours et l'ouverture de bal ?", "Prévoyez-vous un rendez-vous ou un questionnaire musical ?", "Quel matériel est prévu pour notre salle et nos prises de parole ?", "À quelle heure installez-vous, et comment vous coordonnez-vous avec le traiteur ou le lieu ?", "Avez-vous une solution de secours en cas d'imprévu technique ?"] },
+      { heading: "Construire une ambiance qui vous ressemble", paragraphs: ["Préparez trois listes simples : vos incontournables, les titres à éviter et les musiques importantes pour les temps forts. Inutile de dicter chaque morceau : donnez plutôt les univers qui vous ressemblent et laissez une marge pour que la piste vive.", "Un bon déroulé commence souvent doux pendant le repas, prend de l'énergie après l'ouverture de bal et reste attentif aux générations présentes. La bonne musique n'est pas une succession de tubes : c'est le bon titre au bon moment."], note: "MK Sound accompagne les mariages autour d'Arras, Cambrai, Douai et Péronne avec une préparation musicale sur mesure et une installation adaptée au lieu." }
     ]
   }
 ];
@@ -1007,7 +1004,12 @@ function ArticlePage({ article }) {
   return <div className="article-page"><Nav /><main className="article-main">
     <a href="/" className="article-back">← Retour au site MK Sound</a>
     <p className="section-label">Conseils événementiels</p><h1>{article.title}</h1><p className="article-intro">{article.intro}</p>
-    {article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+    {article.sections.map((section) => <section className="article-section" key={section.heading}>
+      <h2>{section.heading}</h2>
+      {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+      {section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}
+      {section.note && <aside className="article-note"><strong>À retenir.</strong> {section.note}</aside>}
+    </section>)}
     <button className="btn-primary" onClick={() => { window.location.href = "/#contact"; }}>Vérifier la disponibilité</button>
   </main><Footer /></div>;
 }
