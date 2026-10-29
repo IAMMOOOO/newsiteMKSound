@@ -176,12 +176,15 @@ function VideoHero() {
       overflow: "hidden",
       paddingTop: 72,
     }}>
-      <iframe
+      <video
         key={soundOn ? "sound-on" : "sound-off"}
         className="youtube-background"
-        src={`https://www.youtube-nocookie.com/embed/JYZ9N5_jqts?autoplay=1&mute=${soundOn ? 0 : 1}&controls=0&loop=1&playlist=JYZ9N5_jqts&playsinline=1&rel=0&modestbranding=1`}
-        title="Ambiance MK Sound"
-        allow="autoplay; encrypted-media; picture-in-picture"
+        src="/film/en-conditions-reelles.mp4"
+        autoPlay
+        muted={!soundOn}
+        loop
+        playsInline
+        preload="metadata"
         aria-hidden="true"
         tabIndex="-1"
       />
